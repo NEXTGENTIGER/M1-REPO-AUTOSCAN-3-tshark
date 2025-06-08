@@ -1,3 +1,9 @@
+Pour supprimer tous les conteneurs Docker, images, volumes, et réseaux non utilisés, tu peux utiliser ces commandes en une seule ligne :
+
+docker container stop $(docker container ls -aq) 2>/dev/null
+docker system prune -af --volumes
+
+
 ----------------------------------------------------------------------------------------------------------------
 À la racine de ton projet (là où est ton docker-compose.yml), lance simplement :
 
